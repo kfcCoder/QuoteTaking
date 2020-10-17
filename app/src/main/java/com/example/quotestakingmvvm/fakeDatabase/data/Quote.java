@@ -1,4 +1,4 @@
-package com.example.quotestakingmvvm.data;
+package com.example.quotestakingmvvm.fakeDatabase.data;
 
 // #1
 public class Quote {

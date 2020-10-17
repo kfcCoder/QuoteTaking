@@ -1,4 +1,4 @@
-package com.example.quotestakingmvvm.data;
+package com.example.quotestakingmvvm.fakeDatabase.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

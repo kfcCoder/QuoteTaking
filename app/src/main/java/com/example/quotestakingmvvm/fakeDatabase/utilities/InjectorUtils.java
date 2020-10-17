@@ -1,9 +1,9 @@
-package com.example.quotestakingmvvm.utilities;
+package com.example.quotestakingmvvm.fakeDatabase.utilities;
 
-import com.example.quotestakingmvvm.data.FakeDatabase;
-import com.example.quotestakingmvvm.data.FakeQuoteDao;
-import com.example.quotestakingmvvm.data.QuoteRepository;
-import com.example.quotestakingmvvm.ui.quotes.QuotesViewModelFactory;
+import com.example.quotestakingmvvm.fakeDatabase.data.FakeDatabase;
+import com.example.quotestakingmvvm.fakeDatabase.data.FakeQuoteDao;
+import com.example.quotestakingmvvm.fakeDatabase.data.FakeRepository;
+import com.example.quotestakingmvvm.fakeDatabase.ui.QuotesViewModelFactory;
 
 // Singleton #7
 public class InjectorUtils {
@@ -14,7 +14,7 @@ public class InjectorUtils {
      */
     public static QuotesViewModelFactory provideQuotesViewModelFactory() {
         FakeQuoteDao dao = FakeDatabase.getInstance().getDao();
-        QuoteRepository repository = QuoteRepository.getInstance(dao);
+        FakeRepository repository = FakeRepository.getInstance(dao);
 
 
         return new QuotesViewModelFactory(repository);

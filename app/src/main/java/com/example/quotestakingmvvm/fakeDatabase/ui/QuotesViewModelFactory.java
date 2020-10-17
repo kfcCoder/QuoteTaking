@@ -1,19 +1,19 @@
-package com.example.quotestakingmvvm.ui.quotes;
+package com.example.quotestakingmvvm.fakeDatabase.ui;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.quotestakingmvvm.data.QuoteRepository;
+import com.example.quotestakingmvvm.fakeDatabase.data.FakeRepository;
 
 /**
  * #6
  * ViewModelFactory is used when ViewModel needs parameters to construct
  */
 public class QuotesViewModelFactory extends ViewModelProvider.NewInstanceFactory {
-    private QuoteRepository quoteRepository;
+    private FakeRepository quoteRepository;
 
-    public QuotesViewModelFactory(QuoteRepository repository) {
+    public QuotesViewModelFactory(FakeRepository repository) {
         this.quoteRepository = repository;
     }
 
